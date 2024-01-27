@@ -1,138 +1,123 @@
 body {
     background-color: #1e1d2b;
     font-family: Arial, sans-serif;
-    max-width: 3500px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-.tituloNaranja {
-    font-size: 2rem;
-    color: #ff702a;
-    margin-bottom: 0.5rem;
-    text-align: center;
-}
-
-.tituloNaranjagrande {
-    font-size: 3rem;
-    color: #ff702a;
-    margin-bottom: 0.5rem;
-    text-align: center;
-}
-
-.tituloBlancoLeft {
-    font-size: 3rem;
-    color: #ffffff;
-    margin-bottom: 0.5rem;
-    text-align: left;
-}
-
-.tituloBlancoCenter {
-    font-size: 3rem;
-    color: #ffffff;
-    margin-bottom: 0.5rem;
-    text-align: center;
-}
-
-
-header {
-    display: flex;
+    max-width: 100%;
     margin: 0;
+    padding: 2vw;
+    box-sizing: border-box;
 }
 
-.container1 h1 {
-    font-size: 3rem;
-    align-self: center;
-    justify-self: start;
+/* Title Styles */
+.orange-title,
+.big-orange-title,
+.white-title-left,
+.white-title-center {
+    font-size: 2vw;
+    color: #ff702a;
+    margin-bottom: 0.5vw;
+    text-align: center;
+}
+
+.big-orange-title {
+    font-size: 3vw;
+}
+
+.white-title-left,
+.white-title-center {
+    font-size: 3vw;
+    color: #ffffff;
+    margin-bottom: 0.5vw;
+}
+
+.white-title-center {
+    text-align: center;
+}
+
+/* Header Styles */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 3vw;
     color: #ff702a;
 }
-
 
 header nav {
-    align-self: center;
-    justify-self: stretch;
-    font-size: 1.2rem;
-    padding: 0.1rem;
-    margin: 0;
+    display: flex;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    justify-content: space-between;
+    list-style: none;
+    padding: 0;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
+nav li {
+    margin-right: 1vw;
 }
 
 nav a {
-    padding: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2vw;
 }
 
-.container1 {
+/* Home Section Styles */
+.home-section {
     display: grid;
-    grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr;
-    padding: 0;
 }
 
-.container1 header {
-    justify-self: start;
-}
-
-
-.container2 {
+.home-container {
     display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
     grid-template-rows: 1fr;
-    gap: 10px;
-    padding: 1%;
+    gap: 1vw;
+    padding: 5vw;
+    align-items: center;
+    text-align: center;
 }
 
-.container2 p,
-img {
-
+.home-container p,
+.home-container img {
     width: 80%;
     height: auto;
-    font-size: 2rem;
+    font-size: 2vw;
     justify-self: center;
     align-self: center;
-    color: ff702a
+    color: #ff702a;
 }
 
-section {
-    margin-bottom: 2rem;
+/* About Section Styles */
+.about-section {
     display: grid;
 }
 
-
-section p {
-    font-size: 3rem;
-    color: #fff
-}
-
-#about {
+.about-container {
     display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
     grid-template-rows: 1fr;
-    gap: 10px;
-    padding: 5%;
+    gap: 1vw;
+    padding: 5vw;
+    align-items: center;
+    text-align: center;
 }
 
-/* #menu{
-    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
-} */
+.about-container img {
+    width: 80%;
+    height: auto;
+}
+
+/* Menu Section Styles */
+.menu-section {
+    display: grid;
+}
 
 .menu-title {
     width: 100%;
 }
-
 
 .menu-items-container {
     width: 100%;
@@ -148,7 +133,6 @@ section p {
     width: 30%;
     margin: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
     text-align: center;
 }
 
@@ -171,7 +155,13 @@ section p {
     margin-bottom: 0.5rem;
 }
 
-footer {
+/* Services Section Styles */
+.services-section {
+    display: grid;
+}
+
+/* Footer Styles */
+.footer-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 70% 30%;
@@ -182,6 +172,15 @@ footer {
     margin-top: 2rem;
 }
 
+.footer-container p {
+    grid-column: span 4; /* Ocupa las 4 columnas */
+}
+
+
+/*_________________________________________________*/
+/*_________________________________________________*/
+/*_________________________________________________*/
+/* Responsive Styles */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -197,5 +196,64 @@ footer {
 
     section h2 {
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 5vw;
+    }
+
+    .big-orange-title,
+    .white-title-left,
+    .white-title-center {
+        font-size: 5vw; /* Ajusta el tamaño del texto en pantallas pequeñas */
+    }
+
+    .home-container p,
+    .home-container img,
+    .about-container img,
+    .menu-item img {
+        width: 100%; /* Ajusta el ancho de las imágenes al 100% en pantallas pequeñas */
+    }
+
+    .header-container {
+        flex-direction: column; /* Cambia la dirección de la disposición en pantallas pequeñas */
+        align-items: flex-start; /* Ajusta la alineación de los elementos del encabezado en pantallas pequeñas */
+    }
+
+    header h1 {
+        font-size: 4vw; /* Ajusta el tamaño del texto del encabezado en pantallas pequeñas */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav li {
+        margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
+        margin-bottom: 1vw; /* Agrega un margen inferior en pantallas pequeñas para separar los elementos */
+    }
+
+    nav a {
+        font-size: 2vw; /* Ajusta el tamaño del texto del enlace en pantallas pequeñas */
+    }
+
+    .home-container,
+    .about-container,
+    .menu-items-container {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
+        gap: 2vw; /* Ajusta el espacio entre las filas en pantallas pequeñas */
+    }
+
+    .menu-item {
+        width: 100%; /* Ajusta el ancho del elemento en pantallas pequeñas */
+        margin: 1vw 0; /* Ajusta el margen del elemento en pantallas pequeñas */
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
+        gap: 2vw; /* Ajusta el espacio entre las filas en pantallas pequeñas */
     }
 }
