@@ -33,19 +33,38 @@ body {
     text-align: center;
 }
 
-/* Header Styles */
+/* Header Section Styles*/
+
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
 }
 
 header h1 {
-    font-size: 3vw;
+    font-size: 48px;
     color: #ff702a;
+    margin: 0;
 }
 
-header nav {
+.menu-btn,
+.menu-toggle {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #ff702a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+
+.menu-btn:hover,
+.menu-toggle:hover {
+    background-color: #f86319;
+}
+
+/* Large Screen Navigation */
+.large-screen .nav-menu {
     display: flex;
 }
 
@@ -53,17 +72,24 @@ nav ul {
     display: flex;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav li {
-    margin-right: 1vw;
+    margin-right: 30px;
 }
 
 nav a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 1.2vw;
+    font-size: 24px;
 }
+
+/* Small Screen Navigation */
+.menu-toggle {
+    display: none;
+}
+
 
 /* Home Section Styles */
 .home-section {
@@ -80,7 +106,7 @@ nav a {
     text-align: center;
 }
 
-.home-container p,
+
 .home-container img {
     width: 80%;
     height: auto;
@@ -88,6 +114,25 @@ nav a {
     justify-self: center;
     align-self: center;
     color: #ff702a;
+}
+
+.home-container p{
+    color: #fff;
+}
+
+#todayMenu{
+    background-color: #ff702a;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 20px; /* Añadido un espacio entre el texto y el botón */
+}    
+#todayMenu:hover{
+    background-color: #f86319;    
 }
 
 /* About Section Styles */
@@ -160,11 +205,66 @@ nav a {
     display: grid;
 }
 
+.footer-container p {
+    grid-column: span 4; /* Ocupa las 4 columnas */
+}
+
+#learnMore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.learn-more-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%; /* Ocupa todo el alto de la sección learnMore */
+}
+
+.text-container {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #ffefe8; /* Fondo blanco del contenedor de texto */
+  padding: 20px;
+  box-sizing: border-box;
+  width: 80%; /* Ocupa el 50% del espacio disponible en learnMore */
+}
+
+.text-container p {
+  margin: 0;
+}
+
+/* Learn More Styles */
+
+.learn-more {
+  background-color: #ff702a;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 20px; /* Añadido un espacio entre el texto y el botón */
+}
+
+.learn-more:hover {
+  background-color: #db5411;
+}
+
+
 /* Footer Styles */
 .footer-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 70% 30%;
+    grid-template-rows: auto; /* Cambiado a altura automática para permitir múltiples filas */
     background-color: #333;
     padding: 1rem;
     text-align: center;
@@ -172,16 +272,15 @@ nav a {
     margin-top: 2rem;
 }
 
-.footer-container p {
-    grid-column: span 4; /* Ocupa las 4 columnas */
-}
-
 
 /*_________________________________________________*/
 /*_________________________________________________*/
 /*_________________________________________________*/
 /* Responsive Styles */
-@media (max-width: 768px) {
+
+
+@media (max-width: 600px) {
+
     header h1 {
         font-size: 2rem;
     }
@@ -197,9 +296,7 @@ nav a {
     section h2 {
         font-size: 1.5rem;
     }
-}
-
-@media (max-width: 600px) {
+    
     body {
         padding: 5vw;
     }
@@ -257,3 +354,7 @@ nav a {
         gap: 2vw; /* Ajusta el espacio entre las filas en pantallas pequeñas */
     }
 }
+
+
+
+

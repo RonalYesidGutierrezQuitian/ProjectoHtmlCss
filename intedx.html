@@ -11,23 +11,28 @@
 <body>
     <header class="header-container">
         <h1>Foods</h1>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
         <nav>
-            <ul>
+            <ul class="nav-menu" hidden>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact-us">Contact</a></li>
+                <li id="menu-toogle-item">
+                <label for="menu-toggle" class="menu-btn">Menu</label></li>
             </ul>
         </nav>
     </header>
-
+      
     <section id="home" class="home-section">
         <div class="home-container">
             <aside>
                 <h1 class="big-orange-title">Full Website</h1>
                 <p class="white-title-left">Foods, the Most precious thing</p>
-                <button>Today's Menu</button>
+                <button onclick="location.href='#menu'" id="todayMenu">
+                    Today's Menu
+                </button>
             </aside>
             <img src="images/home.png" alt="Burger Image">
         </div>
@@ -85,33 +90,33 @@
             <div class="menu-item">
                 <img src="images/s1.png" alt="Chicken Burger">
                 <div class="menu-info">
-                    <h3>Chicken Burger</h3>
-                    <p>Tasty Food</p>
-                    <p>$11.00</p>
+                    <h3>Order</h3>
+                    <p>It is a long established be distracted by the readable be looking at this layout.</p>
                 </div>
             </div>
             <div class="menu-item">
                 <img src="images/s2.png" alt="Special Beef Burger">
                 <div class="menu-info">
-                    <h3>Special Beef Burger</h3>
-                    <p>Tasty Food</p>
-                    <p>$11.00</p>
+                    <h3>Special Beef Burguer</h3>
+                    <p>It is a long established be distracted by the readable be looking at this layout.</p>
                 </div>
             </div>
             <div class="menu-item">
                 <img src="images/s3.png" alt="Chicken Fry Pack">
                 <div class="menu-info">
-                    <h3>Chicken Fry Pack</h3>
-                    <p>Tasty Food</p>
-                    <p>$11.00</p>
+                    <h3>Dellvered</h3>
+                    <p>It is a long established be distracted by the readable be looking at this layout.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="learnMore" class="learn-more-section">
-        <h2>Learn More</h2>
-        <p>We make quality food every day</p>
+        <div class="text-container">
+            <p>We make quality food</p>
+            <p>Everyday</p>
+            <button class="learn-more">Learn More</button>
+        </div>
     </section>
 
     <footer class="footer-container">
@@ -139,7 +144,6 @@
         <div class="contact" id="contact-us">
             <p>Contact Us</p>
         </div>
-        <p>&copy; 2023 Foods. All rights reserved.</p>
     </footer>
 </body>
 
